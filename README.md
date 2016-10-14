@@ -1,2 +1,2 @@
-# emotion-visualization
-Experiments in Emotion Visualization
+# Emotion Visualization
+Experiments in Emotion Visualization by Anna and Benjamin Wiederkehr.
