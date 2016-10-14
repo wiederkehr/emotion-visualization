@@ -1,0 +1,15 @@
+body {
+  background: #eee;
+  font: 100% "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.week {
+  background: #f8f8f8;
+  padding: 10px;
+}
+
+.day {
+  background: #fff;
+  padding: 10px;
+  margin: 10px 0;
+}
