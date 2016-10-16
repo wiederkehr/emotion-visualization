@@ -3,6 +3,7 @@
   // Spreadsheet Variables
   var spreadsheet = '1tdhCOlyMDJHNkOdXeUyhLE--BA2MGb4G6D82ZWOnnvQ';
   var worksheet = 'Week 1';
+  var variables = ['Arousal', 'Conduciveness', 'Controllability', 'Intensity', 'Valence']
 
   // Load Google Spreadsheet Data
   function loadDataFromGSheets(){
@@ -25,7 +26,7 @@
         .append("div")
         .attr("class", "week");
 
-    var title = week.append("h2")
+    var title = week.append("h3")
         .text(sheet.title);
 
     drawDay(week, sheet.data);
@@ -41,23 +42,20 @@
           var day = d3.select(this);
           var chartData = [d.Arousal, d.Conduciveness, d.Controllability, d.Intensity, d.Valence]
 
-          day.append("h3")
-              .text(function(d) { return d.Date; });
-          day.append("span")
-              .text(function(d) { return d.Emotion; });
+          day.append("h4")
+              .text(function(d) { return d.Date + ": " + d.Emotion; });
           day.append('div')
             .attr("class", "chart")
 
-          drawVerticalBarChart(day, chartData);
+          drawHorizontalBarChart(day, chartData);
         });
-
   }
 
   function drawHorizontalBarChart(day, data) {
     // Margin Convention
-    var margin = {top: 20, right: 20, bottom: 20, left: 0};
+    var margin = {top: 0, right: 0, bottom: 0, left: 0};
     var width = 500 - margin.left - margin.right;
-    var height = 140 - margin.top - margin.bottom;
+    var height = 150 - margin.top - margin.bottom;
 
     var min = 0;
     var max = 5;
@@ -85,58 +83,28 @@
         .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; });
 
     bar.append("rect")
-        .attr("width", xscale)
-        .attr("height", barHeight - barGap);
-
-    bar.append("text")
-        .attr("x", function(d) { return xscale(d); })
-        .attr("y", barHeight / 2)
-        .attr("dy", ".35em")
-        .text(function(d) { return d; });
-
-  }
-
-  function drawVerticalBarChart(day, data) {
-    // Margin Convention
-    var margin = {top: 20, right: 20, bottom: 20, left: 0};
-    var width = 500 - margin.left - margin.right;
-    var height = 240 - margin.top - margin.bottom;
-
-    var min = 0;
-    var max = 5;
-
-    // Adding SVG
-    var chart = day.select(".chart").append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-    // Bar Chart Dimensions
-    var barWidth = width / data.length;
-    var barHeight = height;
-    var barGap = 2;
-
-    var yscale = d3.scale.linear()
-        .domain([min, max])
-        .range([0, barHeight]);
-
-    var bar = chart.selectAll("g")
-        .data(data)
-        .enter()
-        .append("g")
-        .attr("transform", function(d, i) { return "translate(" + i * barWidth + ", 0)"; });
+        .attr("width", barWidth)
+        .attr("height", barHeight - barGap)
+        .attr("class", "bar-bg");
 
     bar.append("rect")
-        .attr("height", yscale)
-        .attr("width", barWidth - barGap);
+        .attr("width", function(d) { return xscale(d); })
+        .attr("height", barHeight - barGap)
+        .attr("class", "bar-fg");
 
     bar.append("text")
-        .attr("x", barHeight / 2)
-        .attr("y", function(d) { return yscale(d); })
+        .attr("x", function(d) { return xscale(d) + 5; })
+        .attr("y", barHeight / 2)
         .attr("dy", ".35em")
+        .attr("class", "bar-value")
         .text(function(d) { return d; });
 
+    bar.append("text")
+        .attr("x", 5)
+        .attr("y", barHeight / 2)
+        .attr("dy", ".35em")
+        .attr("class", "bar-key")
+        .text(function(d, i) { return variables[i]; });
   }
 
   loadDataFromGSheets();

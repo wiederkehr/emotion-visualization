@@ -1,0 +1,26 @@
+body {
+  background: #eee;
+  color: #333;
+  font: 75% "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.navigation {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.week {
+  background: #f8f8f8;
+  padding: 10px;
+}
+
+.day {
+  background: #fff;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.day h4 {
+  text-transform: capitalize;
+}

@@ -3,13 +3,20 @@
   <head>
     <meta charset=utf-8>
     <title>Emotion Visualization Experiment 0.1</title>
+    <link type="text/css" rel="stylesheet" href="../assets/css/main.css"/>
     <link type="text/css" rel="stylesheet" href="style.css"/>
   </head>
   <body>
-    <h1>Emotion Visualization Experiment 0.1</h1>
+    <h1>Emotion Visualization</h1>
+    <h2>Experiment 0.1</h2>
+    <select class="navigation" onchange="if (this.value) window.location.href=this.value">
+      <option value="../experiment-0.1/index.html" selected>Experiment 0.1</option>
+      <option value="../experiment-0.2/index.html">Experiment 0.2</option>
+      <option value="../experiment-0.3/index.html">Experiment 0.3</option>
+    </select>
     <div class="content"></div>
-    <script src="http://d3js.org/d3.v3.min.js"></script>
-    <script src="gsheets.min.js"></script>
+    <script src="../assets/js/d3.v3.min.js"></script>
+    <script src="../assets/js/gsheets.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
