@@ -1,0 +1,93 @@
+Date,Emotion,Secondary Emotion,Events,Arousal,Conduciveness,Controllability,Intensity,Valence
+"July 1, 2016",Annoyance,"mild contempt, hopelessness","Boring sex, driving from Djúpavik to Akureyri, annoyance between Ben and I ",2.00,1.00,3.00,3.00,1.00
+"July 2, 2016","Pensiveness, acceptance",Frustration,"Watching the Germany match, walking home in frustration of sad fuchs",2.00,1.00,2.00,4.00,2.00
+"July 3, 2016",Trust,"Calm, acceptance","Great hike, Myvatn pools, pizza, Iceland game",1.00,4.00,4.00,2.00,4.00
+"July 4, 2016",Joy,,"Myvatn Exkursion To askja, hiked through snow and a canyon, Last night of camping ",2.00,5.00,5.00,4.00,4.00
+"July 5, 2016",Optimism,Happy,"Hiking, driving to laugarfell, eating cake on a hill, drinking beers on a river",1.00,5.00,3.00,4.00,4.00
+"July 6, 2016","Optimism, joy ","Happiness, acceptance, slight distraction ","Driving from laugarfell after nice waterfall hike, reading in the sunshine, arrive in Höfn and dinner at Pakkhus",1.00,5.00,4.00,3.00,4.00
+"July 7, 2016",Joy,"Happy, pleasure, trust","Glacier guides tour, almost ran out of gas, beers outside, beautiful day, sex, burgers, falling asleep to audio book",3.00,5.00,3.00,5.00,5.00
+"July 8, 2016",Joy,,"Driving to Skeidvellir, horse back riding, secret pool, jokulsarlon lagoon",2.00,4.00,4.00,3.00,4.00
+"July 9, 2016","Acceptance, trust ",,"Drive to Reykjavik, walking around, eating pizza and drinking beers and cocktails, fight",2.00,3.00,2.00,4.00,3.00
+"July 10, 2016","Optimism, trust","Happiness, accomplished","Flight home, unpacking, organizing, EM final ",1.00,3.00,5.00,2.00,3.00
+"July 11, 2016",Interest,"Scattered, boredom",Back to school,1.00,1.00,3.00,4.00,1.00
+"July 12, 2016",Distracted ,"accomplished, frustrated, scattered","Working at school, small visit from Benji, call with my brother, missing",4.00,2.00,2.00,4.00,2.00
+"July 13, 2016",Cynicsm,"Distracted, Pensiveness, frustration","Working at school, gym, wanted to make a small geschenkli, frustrated with k texts, dilemma for tomorrow night",4.00,1.00,1.00,5.00,2.00
+"July 14, 2016",Cynicism ,"distracted, pensive, contempt ","Working, chat with Romana, Interview, the men in my life just do whatever the fuck they want ",4.00,1.00,1.00,5.00,1.00
+"July 15, 2016","Cynicsm, Frustration ","Anxiety, fear, joy ","Missing, couldn't focus, was distracted, great workshop, happy evening ",4.00,1.00,2.00,4.00,2.00
+"July 16, 2016",Content,"Happiness, Joy","Easy but accomplished Sunday, skipped David and Maureen's party, easy cocktail in Zurich, night out with romana",2.00,4.00,3.00,3.00,3.00
+"July 17, 2016","Happy, content, relaxed",,"Came home super early in AM, slept in late with fuchs, cleaned bikes and see husli ",1.00,4.00,4.00,1.00,4.00
+"July 18, 2016","Happy, content",,"Coffee with Kevin, Limmat with Romana and Kevin, drink with Fuchs for happy anniversary ",2.00,4.00,4.00,1.00,3.00
+"July 19, 2016","Happy, content ",Delight,Easy day on the Limmat with Kevin,1.00,4.00,4.00,2.00,4.00
+"July 20, 2016","Happy, Optimistic",,"Limmat with Kevin and Romana, picnic, schläfli",2.00,4.00,3.00,4.00,5.00
+"July 21, 2016",Love,"Happy, Delight, Accomplished","Schönen Morgen, Toni, Faye, Run, Snacks",5.00,2.00,1.00,5.00,5.00
+"July 22, 2016",Disappointed,,"Working at IXT, waiting on everyone, weird apero drinks",3.00,1.00,2.00,4.00,2.00
+"July 23, 2016","Annoyance, Happy",Nervous,"Admin Saturday, on and off fighting with Benji, Jeannine's birthday dinner, out in Zurich with Kevin, Romana and friends",2.00,1.00,4.00,3.00,2.00
+"July 24, 2016",Distracted,,"Watched Faye, Aare, missing",1.00,1.00,3.00,1.00,1.00
+"July 25, 2016","Remorse, Happy",,"Sick, Zürich, baking",1.00,1.00,5.00,1.00,3.00
+"July 26, 2016","Impressed, Happy",Judgement,"Schönen Morgen, arbeiten, zu hause, run, dinner",4.00,2.00,2.00,4.00,4.00
+"July 27, 2016",Annoyance,Hopelessness,"Fight with Kevin, work day, drinks with Benji and IXT",5.00,1.00,3.00,5.00,1.00
+"July 28, 2016",Ambivalent,"Indifference, boredom, desire to be alone","umhängen, ZHDK work, run",1.00,1.00,4.00,4.00,2.00
+"July 29, 2016",Frustration,"Ambivalent, Aloof","Work, lunch with Kevin, dinner date with Benji, fight",4.00,1.00,2.00,5.00,1.00
+"July 30, 2016",Confused,"Torn, Frustration","Zürich sofa searching, lettenfest with Kevin, Julia, Jacquelin",3.00,3.00,4.00,5.00,3.00
+"July 31, 2016",Annoyed,"Hopeless, Ambivalent",Seehüsli Party,3.00,1.00,4.00,3.00,2.00
+"August 1, 2016",Hurt,"Frustration, Ambivalence, Lonliness","Lunch with Wiederkehrs, missing",1.00,1.00,2.00,4.00,2.00
+"August 2, 2016",Delight,Anticipation,"Coffee with Kevin, zu hause, work, run with Benji, dinner",4.00,2.00,4.00,4.00,4.00
+"August 3, 2016",Joy,Distraction,"Aarau visit, Sun, cooking, drinks with benjamin at waldmeier",2.00,3.00,5.00,4.00,4.00
+"August 4, 2016",Content,,"Spheres with Kevin, Toni working, Beers with Benjamin, dinner at home",1.00,5.00,5.00,2.00,4.00
+"August 5, 2016",Anticipation,"Frustration, Excitment","Kafi and Balkon on Limmat, ZHdK, Kopieraum, Fuchs Workshop, Dinner",4.00,4.00,3.00,5.00,3.00
+"August 6, 2016",Anticipation,"Excitment, Content","Admin morning, drive and hike to Milchspüeler ",2.00,5.00,4.00,3.00,4.00
+"August 7, 2016",Content,Fulfilled,"Camping, hike back, float down aare, easy sunday evening",2.00,4.00,4.00,3.00,5.00
+"August 8, 2016",Bored,Accomplished,"Limmat, Admin, Dinner with Benji",1.00,3.00,5.00,1.00,3.00
+"August 9, 2016",Disappointment,"Disapproval, Hopelessness","ZHDK, men are all the worst, beers with sascha, fight with benji",4.00,1.00,2.00,5.00,1.00
+"August 10, 2016",Accomplished ,Frustrated,"ZHdK, chat with romana, Kevin sucks - abgesagt to beer",2.00,5.00,4.00,2.00,3.00
+"August 11, 2016",Enjoyment ,Content,"Working at School, drinks with Martina, drinks with romana, great discussion, out dancing, boys are all hilarious and awful, ran into Daniel ",2.00,5.00,4.00,4.00,5.00
+"August 12, 2016",Disappointed ,"distracted, frustrated","Worked at IXT, ignored all day, bought a book and focused on coping mechanisms ",5.00,1.00,1.00,5.00,1.00
+"August 13, 2016",Anticipation,,"Long drive to frontingnan, looking forward to detox and spending the week with Benji and without distraction, fight after run",2.00,5.00,5.00,2.00,4.00
+"August 14, 2016",Content,relaxed ,Easy beach day,1.00,5.00,5.00,1.00,4.00
+"August 15, 2016",Happy,"Content, relaxed","Drive to sete and walking around, easy beach day, cocktails, tiny workshop ",1.00,5.00,4.00,2.00,4.00
+"August 16, 2016",Enjoyment ,Content,"Montpellier, beaching and small fight over pizza at dinner",3.00,2.00,4.00,2.00,3.00
+"August 17, 2016",Excited,"Excitable, Nervous","Canoeing, Jumping from the Pont de Diablo, failed grilling",3.00,4.00,3.00,3.00,4.00
+"August 18, 2016",Enjoyment,Content,"Beach Day, Fuchs bites",1.00,5.00,5.00,1.00,5.00
+"August 19, 2016",Enjoyment,Content,"Beah Day, Sete at night for dinner",2.00,5.00,4.00,1.00,4.00
+"August 20, 2016",Acceptance,Content,"Long drive home, listening to audio book, working in Montpellier, hanging out in Montpellier and Avignon",2.00,5.00,5.00,1.00,4.00
+"August 21, 2016",Relaxed,Focused,"Easy unpacking and brunch day, accomplished, run, pizza dinners",2.00,5.00,5.00,1.00,5.00
+"August 22, 2016","Happy, Joy",,"Felt really great today, working IDSS with Nikita all day, good chat with Romana and Nikita, beer with Christian and Benji",2.00,5.00,4.00,4.00,5.00
+"August 23, 2016",Content, busy,"Working at zhdk, hanging out With Nikita, apartment visit and drinks with Archie and romana, running with benji",1.00,5.00,5.00,2.00,5.00
+"August 24, 2016",Content,"relaxed, happy ","Day off, bit of work in the morning, Limmat all afternoon, drinks with Peter in Frau Gerolds Garden ",2.00,5.00,5.00,2.00,4.00
+"August 25, 2016",Happy,,"Worked IDSS, running with Benji",2.00,5.00,3.00,4.00,5.00
+"August 26, 2016",Happy ,,"Worked IDSS with Nikita, swimming in the Limmat, good conversation and happy to work for zhdk, dinner Thai pop up with benji",2.00,5.00,2.00,4.00,5.00
+"August 27, 2016","Content, acceptance",Tired,"Marble exhibition, turn table, IKEA, Bodensee swimming, out in Laguna, fight with Benji ",2.00,4.00,5.00,2.00,4.00
+"August 28, 2016",Happy,,"Brunch with Wiederkehrs, Aare with benji",1.00,5.00,5.00,1.00,5.00
+"August 29, 2016","Content, Calm",,ZHdK work,1.00,5.00,5.00,1.00,3.00
+"August 30, 2016",Accomplished,Tired,"ZHdK work, run, jump in Limmat, beer with Peter at Limmat, late night home, pasta with benji at 1am",1.00,4.00,5.00,1.00,3.00
+"August 31, 2016",Tense,"Frustrated, Accomplished","Working at Interactive Things for Benji's presentation, late night",2.00,4.00,2.00,3.00,4.00
+"September 1, 2016",Happy,Sympathy,"Benji's conference in Bern with Kalli, home early, working and run",1.00,5.00,4.00,2.00,5.00
+"September 2, 2016",Happy,,"Working at Toni, Limmat, editing with Nikita, beer with Nikita, dinner with Benji at Bottega berta",2.00,5.00,4.00,2.00,5.00
+"September 3, 2016",Frustrated,Acceptance,"Sex, Fight on and off all day, hiking at Rigi, suicide squad, drink at Jojo, more fighting, sleeping separate",4.00,2.00,4.00,4.00,2.00
+"September 4, 2016",Content,,"Breakfast, documentaries, running, movie, dinner ",1.00,3.00,5.00,1.00,3.00
+"September 5, 2016",Content,Happy,"Working ZHdK, errand running, new Vans, Beer with Benji, Apartment showing, dinner",2.00,5.00,5.00,2.00,4.00
+"September 6, 2016",Content,Acceptance,"Worked at ZHdK, run, beers with Sascha, couldn't get a hold of benjamin, 2 Apartment showings, fight on the train",4.00,4.00,3.00,3.00,4.00
+"September 7, 2016",Happy,,"Worked at Interactive Things, Drink at Waldmeier, Fuchs bites for dinner ",1.00,5.00,5.00,2.00,5.00
+"September 8, 2016",Calm,,"Working at ZHdK, lunch with Benji and Marcus, home, Rathaus, Run, Dinner with Benji",1.00,5.00,5.00,1.00,4.00
+"September 9, 2016",Calm,,"Working at ZHdK, laid out, Faye's birthday party, drinks at Oscar 1",1.00,5.00,5.00,1.00,4.00
+"September 10, 2016",Happy,Frustrated,"Meredith in Lucerne, dinner at Andy's Place, sick",2.00,4.00,3.00,3.00,4.00
+"September 11, 2016",Acceptance,,"Swimming in Aare with Benji, grill out at Sophies, sick",1.00,3.00,4.00,1.00,3.00
+"September 12, 2016",Tired,"Bored, useless","All day home and sick, watching Netflix, Benji home early, cooking",1.00,1.00,1.00,1.00,2.00
+"September 13, 2016",Exhausted,Sick,"ZHdK, coffee with Romana, home",1.00,2.00,1.00,1.00,2.00
+"September 14, 2016",Calm,Annoyed,"Wax, Zürich for bike and benji's present, afternoon with Benji, hating everyone at the airport, flight to Hong Kong",2.00,2.00,4.00,2.00,2.00
+"September 15, 2016",Annoyed,irritated,"Arrived in Hong Kong, hating groups, ate dinner, drank drinks",2.00,1.00,4.00,3.00,2.00
+"September 16, 2016",Joy,,"Stanley beach with Nikita, Lena and Vera, Victoria Park, Dragon Dance in Tai Han, Beers at Granville Island and Bar Pacific",3.00,5.00,4.00,4.00,5.00
+"September 17, 2016",Happy,,"Dragon's Back hike, lunch at Shek O Beach, volley ball and swimming",3.00,5.00,3.00,4.00,4.00
+"September 18, 2016",Positive,Happy,"Walking around Mong Kok and Sham Shui Po, Lunch, Sneaker Strasse, Beers with Nikita and Salome, night out with N and S",2.00,4.00,3.00,3.00,4.00
+"September 19, 2016",Interested,Happy,"First day of workshop, Meeting Michael, lunch at Mido, abandoned building, apartment with Uncle Hung, bookstore, Sham Shui Po district, Homeless housing, Fabric Market, Cafe, Computer Mecca, So Boring cafe, Michael's shop and beers",3.00,5.00,2.00,4.00,4.00
+"September 20, 2016",Wonder,Happy,"Excursion to Sai Kung and Sai Wan Village, Hike to waterfalls and swimming in the beach",4.00,5.00,1.00,5.00,5.00
+"September 21, 2016",Positive,Happy,"Mapopo Community farm introduction, Cooked Food center, swimming with Eleonora, dinner and beers in the room",2.00,4.00,4.00,2.00,4.00
+"September 22, 2016",Calm,,"Connecting spaces, working on Publication, discussion with Michael and Leo",1.00,3.00,4.00,1.00,3.00
+"September 23, 2016",Happy,,"Connecting spaces, finishing Publication, presentation, apero beers, out with Alex, Lain, Carla, Eleonora, Mark and Anaise at Warehouse party",3.00,4.00,2.00,3.00,4.00
+"September 24, 2016","Happy, Hopeful",Positive,"Last day at Stanley beach with Vera, Nikita, Mark and Mark, Eleonora, Salome, Flight back home to Zurich",2.00,4.00,2.00,3.00,4.00
+"September 25, 2016","Joy, Love",,"Benji picked me up from the airport, brunch, Aarau v Zuri match, beers with Jeannine and Silvio, indian dinner and early falling asleep",4.00,5.00,2.00,5.00,5.00
+"September 26, 2016",Calm,,"Working at ZHDK, coffee with Eleonora, run with Benji",1.00,5.00,4.00,2.00,5.00
+"September 27, 2016",Annoyance,,"ZHDK minor workshop, lunch with Eleonora and Sascha, dinner with Benji",3.00,2.00,2.00,2.00,2.00
+"September 28, 2016",Frustrated,,"run in the morning, ZHDK workshop, beers with friends, left early frustrated, cried, talk with John Stortz",4.00,1.00,3.00,4.00,2.00
+"September 29, 2016",Frustrated,,"laundry, meeting with Björn, working at ZHDK, beers at Mehrspur, annoying priviledged white man, Carlos is nice, bike ride home, talk with John Stortz, fight with Benji",3.00,1.00,2.00,2.00,1.00
+"September 30, 2016",Bored ,,"ZHdK working, Lunch and ice cream with Eleanora, egliswil to say bye, tense and frustrated ride home, packing for NYC",1.00,1.00,1.00,2.00,2.00
