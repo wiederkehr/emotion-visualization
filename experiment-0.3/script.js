@@ -1,42 +1,43 @@
 (function() {
 
   // Spreadsheet Variables
-  var spreadsheet = '13UybkuIMTSgeO3D5OrcnLoBh0rwx7jiOpEjHpQPcgtA';
-  var worksheet = 'Summer-2016';
+  var localData = '../data/Anna-Summer-2016.csv';
   var variables = ['Arousal', 'Conduciveness', 'Controllability', 'Intensity', 'Valence']
 
-  // Load Google Spreadsheet Data
-  function loadDataFromGSheets(){
-    console.log("Start Loading Data");
-    gsheets.getWorksheet(spreadsheet, worksheet, loadDataCompleted);
-  }
-
-  // Load Data Completed
-  function loadDataCompleted(error, sheet){
-    console.log("Loading Data Completed");
-
-    if (sheet && sheet.data) {
-      console.log(sheet);
-      drawWeek(sheet)
-    }
-  }
-
+  // Design Variables
   var min = 1;
   var max = 5;
 
+  // Scales
   var colorScale = d3.scale.linear()
-        .domain([1, 2, 3, 4, 5])
-        .range(["#ca0020", "#f4a582", "#e0e0e0", "#92c5de", "#0571b0"]);
+    .domain([1, 2, 3, 4, 5])
+    .range(["#ca0020", "#f4a582", "#e0e0e0", "#92c5de", "#0571b0"]);
 
-  function drawWeek(sheet) {
+  // Load Local Spreadsheet Data
+  function loadDataFromLocal(){
+    console.log("Start Loading Data");
+    d3.csv(localData, loadDataCompleted);
+  }
+
+  // Load Data Completed
+  function loadDataCompleted(error, data){
+    console.log("Loading Data Completed");
+
+    if (data) {
+      console.log(data);
+      drawWeek(data)
+    }
+  }
+
+  function drawWeek(data) {
     var week = d3.select(".content")
         .append("div")
         .attr("class", "week");
 
     var title = week.append("h3")
-        .text(sheet.title);
+        .text("Summer 2016");
 
-    drawDay(week, sheet.data);
+    drawDay(week, data);
     drawLegend ();
   }
 
@@ -172,6 +173,6 @@
         .attr("x", function(d, i) { return 20 * i});
   }
 
-  loadDataFromGSheets();
+  loadDataFromLocal();
 
 })()
