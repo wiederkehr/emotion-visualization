@@ -1,0 +1,22 @@
+.week {
+  position: relative;
+}
+
+.day {
+  display: inline-block;
+  margin: 2px;
+  width: 200px;
+  overflow: hidden;
+}
+
+.day h4 {
+  white-space: nowrap;
+  margin-top: 0;
+  color: #ccc;
+}
+
+.legend {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
