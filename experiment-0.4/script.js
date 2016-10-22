@@ -26,7 +26,7 @@
     .domain([min, max])
     .range([10, 0]);
 
-// Load Local Spreadsheet Data
+  // Load Local Spreadsheet Data
   function loadDataFromLocal(){
     console.log("Start Loading Data");
     d3.csv(localData, loadDataCompleted);
