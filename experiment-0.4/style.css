@@ -18,27 +18,6 @@
   color: #ccc;
 }
 
-.square-bg {
-  stroke-width: 2px;
-  stroke: #fff;
-}
-
-.axis {
-  stroke: #ddd;
-}
-
-.axis-text {
-  font-size: 10px;
-  text-anchor: middle;
-  text-transform: uppercase;
-  opacity: 0;
-  transition: opacity 300ms;
-}
-
-.day:hover .axis-text {
-  opacity: 1;
-}
-
 .legend {
   position: absolute;
   top: 20px;
