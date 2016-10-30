@@ -1,0 +1,16 @@
+.axis path {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+form {
+  margin-bottom: 10px;
+}
+.group-label {
+  text-anchor: end;
+}

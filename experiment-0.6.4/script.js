@@ -18,10 +18,12 @@
   var yScaleSplit = d3.scale.linear().range([height, 0]);
   var yScaleStack = d3.scale.linear().range([height, 0]);
   var yScaleExpand = d3.scale.linear().range([height, 0]);
-
   var xScale = d3.time.scale().rangeRound([0, width]);
-  var colorScale = d3.scale.ordinal().range(['#3BB3B6','#6B9EC1','#9B84B0','#B56B8A','#B35E5E']);
-  colorScale = d3.scale.ordinal().range(['#f1c40f','#e67e22','#e74c3c','#9b59b6','#3498db']);
+  var pScale = d3.scale.linear().domain([0, width]).rangeRound([0, 100]);
+  var colorScale = d3.scale.linear()
+    .domain([1, 2, 3, 4, 5])
+    // .range(["#ca0020", "#f4a582", "#e0e0e0", "#92c5de", "#0571b0"]);
+    .range(["#eff3ff", "#bdd7e7", "#6baed6", "#3182bd", "#08519c"]);
 
   // Adding SVG
   var chart = d3.select(".content").append("svg")
@@ -30,6 +32,15 @@
       .style("background", "#fff")
       .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  // Adding Gradient
+  var gradient = chart.append("defs")
+    .append("linearGradient")
+    .attr("id", "gradient")
+    .attr("x1", "0%")
+    .attr("y1", "0%")
+    .attr("x2", "100%")
+    .attr("y2", "0%");
 
   // Data
   var nested;
@@ -92,6 +103,7 @@
     console.log("Loading Data Completed");
 
     var newData = [];
+    var valenceData = [];
     data.forEach(function(d) {
       d.Date = parseDate(d.Date);
       var arousal = new Object();
@@ -114,10 +126,15 @@
       valence.date = d.Date;
       valence.group = 'Valence';
       valence.value = +d.Valence;
-      newData.push(arousal, conduciveness, controllability, intensity, valence)
+
+      newData.push(arousal, conduciveness, controllability, intensity);
+      valenceData.push(valence);
     });
 
     newData.sort(function(a, b) {
+      return a.date - b.date;
+    });
+    valenceData.sort(function(a, b) {
       return a.date - b.date;
     });
 
@@ -133,6 +150,13 @@
     yScaleSplit.range([lineHeight, padding]);
     yScaleExpand.domain([0, 1]);
 
+    // Gradient Specification
+    valenceData.forEach(function(d) {
+      gradient.append("stop")
+        .attr("offset", pScale(xScale(d.date)) + "%")
+        .attr("stop-color", colorScale(+d.value))
+    });
+
     // Draw Chart
     drawAreas(newData);
     drawAxis();
@@ -140,6 +164,8 @@
   }
 
   function drawAreas(data) {
+
+    console.log("drawAreas");
     var group = chart.selectAll(".group")
         .data(stackLayers)
         .enter().append("g")
@@ -156,7 +182,10 @@
     group.append("path")
         .attr("class", "layer")
         .attr("d", function(d) { return areaSplit(d.values); })
-        .style("fill", function(d, i) { return colorScale(i); });
+        .attr("clip-path", "url(#clip)")
+        .style("fill", "url(#gradient)")
+        .style("stroke", "#fff")
+        .style("stroke-width", "1px");
   }
 
   function drawAxis() {

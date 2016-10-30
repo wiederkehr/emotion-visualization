@@ -10,6 +10,8 @@
   var padding = 10;
   var lineHeight = 0;
 
+  var mode = "";
+
   // Data Functions
   var nestGroup = d3.nest().key(function(d) { return d.group; });
   var parseDate = d3.time.format("%B %-d, %Y").parse;
@@ -18,10 +20,11 @@
   var yScaleSplit = d3.scale.linear().range([height, 0]);
   var yScaleStack = d3.scale.linear().range([height, 0]);
   var yScaleExpand = d3.scale.linear().range([height, 0]);
-
   var xScale = d3.time.scale().rangeRound([0, width]);
-  var colorScale = d3.scale.ordinal().range(['#3BB3B6','#6B9EC1','#9B84B0','#B56B8A','#B35E5E']);
-  colorScale = d3.scale.ordinal().range(['#f1c40f','#e67e22','#e74c3c','#9b59b6','#3498db']);
+  var pScale = d3.scale.linear().domain([0, width]).rangeRound([0, 100]);
+  var colorScale = d3.scale.linear()
+    .domain([1, 2, 3, 4, 5])
+    .range(["#eff3ff", "#bdd7e7", "#6baed6", "#3182bd", "#08519c"]);
 
   // Adding SVG
   var chart = d3.select(".content").append("svg")
@@ -30,6 +33,27 @@
       .style("background", "#fff")
       .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  // Adding Gradient
+  var gradient = chart.append("defs")
+    .append("linearGradient")
+    .attr("id", "gradient")
+    .attr("x1", "0%")
+    .attr("y1", "0%")
+    .attr("x2", "100%")
+    .attr("y2", "0%");
+
+  // Adding Zoom
+  chart.append("clipPath")
+    .attr("id", "clip")
+    .append("rect")
+    .attr("x", xScale(0))
+    .attr("y", yScaleSplit(1))
+    .attr("width", xScale(1) - xScale(0))
+    .attr("height", yScaleSplit(0) - yScaleSplit(1));
+
+  var zoom = d3.behavior.zoom()
+    .on("zoom", redrawAreas);
 
   // Data
   var nested;
@@ -40,8 +64,7 @@
   // Axis
   var xAxis = d3.svg.axis()
       .scale(xScale)
-      .orient("bottom")
-      .ticks(d3.time.weeks);
+      .orient("bottom");
 
   // Layouts
   var stack = d3.layout.stack()
@@ -92,6 +115,7 @@
     console.log("Loading Data Completed");
 
     var newData = [];
+    var valenceData = [];
     data.forEach(function(d) {
       d.Date = parseDate(d.Date);
       var arousal = new Object();
@@ -114,10 +138,15 @@
       valence.date = d.Date;
       valence.group = 'Valence';
       valence.value = +d.Valence;
-      newData.push(arousal, conduciveness, controllability, intensity, valence)
+
+      newData.push(arousal, conduciveness, controllability, intensity);
+      valenceData.push(valence);
     });
 
     newData.sort(function(a, b) {
+      return a.date - b.date;
+    });
+    valenceData.sort(function(a, b) {
       return a.date - b.date;
     });
 
@@ -133,13 +162,37 @@
     yScaleSplit.range([lineHeight, padding]);
     yScaleExpand.domain([0, 1]);
 
+    // Gradient Specification
+    valenceData.forEach(function(d) {
+      gradient.append("stop")
+        .attr("offset", pScale(xScale(d.date)) + "%")
+        .attr("stop-color", colorScale(+d.value))
+    });
+
     // Draw Chart
+    drawBackground();
+    initiateZoom();
     drawAreas(newData);
     drawAxis();
     mountSelect();
   }
 
+  function drawBackground() {
+    chart.append("rect")
+    .attr("class", "pane")
+    .attr("width", width)
+    .attr("height", height)
+    .attr("fill", "#fff")
+  }
+
+  function initiateZoom() {
+    zoom.x(xScale);
+    chart.call(zoom);
+  }
+
   function drawAreas(data) {
+
+    console.log("drawAreas");
     var group = chart.selectAll(".group")
         .data(stackLayers)
         .enter().append("g")
@@ -156,7 +209,10 @@
     group.append("path")
         .attr("class", "layer")
         .attr("d", function(d) { return areaSplit(d.values); })
-        .style("fill", function(d, i) { return colorScale(i); });
+        .attr("clip-path", "url(#clip)")
+        .style("fill", "url(#gradient)")
+        .style("stroke", "#fff")
+        .style("stroke-width", "1px");
   }
 
   function drawAxis() {
@@ -166,20 +222,45 @@
         .call(xAxis);
   }
 
+  function redrawAreas() {
+    chart.select("g.x.axis").call(xAxis);
+    chart.selectAll("path.layer").attr("d", function(d) {
+      switch(mode) {
+        case "split":
+          return areaSplit(d.values);
+        break;
+        case "stack":
+          return areaStack(d.values);
+        break;
+        case "stream":
+          return areaStack(d.values);
+        break;
+        case "expand":
+          return areaExpand(d.values);
+        break;
+      }
+    });
+  }
+
   function mountSelect() {
+    mode = "split";
     d3.selectAll("input").on("change", change);
     function change() {
       switch(this.value) {
         case "split":
+          mode = "split";
           transitionToSplit();
         break;
         case "stack":
+          mode = "stack";
           transitionToStack();
         break;
         case "stream":
+          mode = "stream";
           transitionToStream();
         break;
         case "expand":
+          mode = "expand";
           transitionToExpand();
         break;
       }
