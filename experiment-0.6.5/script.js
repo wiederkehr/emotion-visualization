@@ -19,8 +19,8 @@
   var xScale = d3.time.scale().rangeRound([0, width]);
   var pScale = d3.scale.linear().domain([0, width]).rangeRound([0, 100]);
   var colorScale = d3.scale.linear()
-    .domain([1, 2, 3, 4, 5])
-    .range(["#eff3ff", "#bdd7e7", "#6baed6", "#3182bd", "#08519c"]);
+    .domain([1, 5])
+    .range(["#ca0020", "#0571b0"]);
 
   // Adding SVG
   var chart = d3.select(".content").append("svg")

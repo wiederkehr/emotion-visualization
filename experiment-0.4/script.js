@@ -11,8 +11,8 @@
 
   // Scales
   var colorScale = d3.scale.linear()
-    .domain([1, 2, 3, 4, 5])
-    .range(["#ca0020", "#f4a582", "#e0e0e0", "#92c5de", "#0571b0"]);
+    .domain([1, 5])
+    .range(["#ca0020", "#0571b0"]);
 
   var radiusScale = d3.scale.sqrt()
     .domain([0, max])
@@ -80,8 +80,6 @@
     var width = square - margin.left - margin.right;
     var height = square - margin.top - margin.bottom;
 
-    var valence = data.Valence;
-
     // Adding SVG
     var chart = day.select(".chart").append("svg")
         .attr("width", width + margin.left + margin.right)
@@ -91,6 +89,10 @@
 
     var filter = chart.append("filter")
         .attr("id", "blur")
+        .attr("x", "-50%")
+        .attr("y", "-50%")
+        .attr("width", "200%")
+        .attr("height", "200%")
         .append("feGaussianBlur")
         .attr("stdDeviation", blurScale(data.Controllability));
 
@@ -103,7 +105,7 @@
         .attr("cy", 0)
         .attr("r", function(d) { return radiusScale(data.Intensity)})
         .style("opacity", function(d) { return opacityScale(data.Conduciveness)})
-        .attr("fill", colorScale(valence))
+        .attr("fill", colorScale(data.Valence))
         .attr("filter", "url(#blur)");
 
   }

@@ -10,8 +10,8 @@
 
   // Scales
   var colorScale = d3.scale.linear()
-    .domain([1, 2, 3, 4, 5])
-    .range(["#ca0020", "#f4a582", "#e0e0e0", "#92c5de", "#0571b0"]);
+    .domain([1, 5])
+    .range(["#ca0020", "#0571b0"]);
 
   // Load Local Spreadsheet Data
   function loadDataFromLocal(){
