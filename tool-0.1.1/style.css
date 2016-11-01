@@ -1,0 +1,30 @@
+.tool {
+  display: flex;
+  background: #f8f8f8;
+  padding: 10px;
+}
+
+.panel {
+  float: left;
+  background: #fff;
+  padding: 10px;
+}
+
+.form {
+  padding: 10px;
+  margin: 0 0 0 10px;
+  background: #fff;
+}
+
+.slider {
+  display: flex;
+  padding: 5px 0;
+}
+
+.slider label {
+  min-width: 100px;
+}
+
+.slider input {
+
+}
