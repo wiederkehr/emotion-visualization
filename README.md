@@ -1,2 +1,2 @@
-# Emotion Visualization Experiments
-Experiments in Emotion Visualization by Anna and Benjamin Wiederkehr.
+# Fine Visualization Experiments
+Experiments in emotion visualization by Anna and Benjamin Wiederkehr.
